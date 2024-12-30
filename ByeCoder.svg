@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="200" viewBox="0 0 500 200">
+  <style>
+    @keyframes typing {
+      0% { width: 0; }
+      100% { width: 250px; }
+    }
+    .text {
+      font-family: 'Courier New', monospace;
+      font-size: 24px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid black;
+      animation: typing 2s steps(25) infinite;
+    }
+    .hidden {
+      visibility: hidden;
+    }
+    .line {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2;
+    }
+  </style>
+
+  <!-- Text containers -->
+  <text x="20" y="40" class="text" id="python">print("ByeCoder")</text>
+  <text x="20" y="80" class="text hidden" id="lua">print("ByeCoder")</text>
+  <text x="20" y="120" class="text hidden" id="php">echo "ByeCoder";</text>
+  <text x="20" y="160" class="text hidden" id="bash">echo "ByeCoder"</text>
+
+  <!-- Animation logic -->
+  <script>
+    let pythonText = document.getElementById('python');
+    let luaText = document.getElementById('lua');
+    let phpText = document.getElementById('php');
+    let bashText = document.getElementById('bash');
+
+    function animateText() {
+      setTimeout(() => {
+        pythonText.classList.add('hidden');
+        luaText.classList.remove('hidden');
+      }, 2500);
+
+      setTimeout(() => {
+        luaText.classList.add('hidden');
+        phpText.classList.remove('hidden');
+      }, 5000);
+
+      setTimeout(() => {
+        phpText.classList.add('hidden');
+        bashText.classList.remove('hidden');
+      }, 7500);
+
+      setTimeout(() => {
+        bashText.classList.add('hidden');
+        pythonText.classList.remove('hidden');
+      }, 10000);
+    }
+
+    animateText();
+    setInterval(animateText, 15000); // Loop the animation
+  </script>
+</svg>
