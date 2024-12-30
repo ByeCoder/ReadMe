@@ -1,16 +1,7 @@
-<style>
-  @keyframes move {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(100px, 100px); }
-    100% { transform: translate(0, 0); }
-  }
+<img src=https://raw.githubusercontent.com/ByeCoder/ReadMe/refs/heads/main/ByeCoder.webp></img>
+<img src=https://raw.githubusercontent.com/ByeCoder/ReadMe/refs/heads/main/ByeCoder2.webp></img>
 
-  .moving-box {
-    width: 50px;
-    height: 50px;
-    background-color: #4CAF50;
-    animation: move 3s infinite;
-  }
-</style>
 
-<div class="moving-box"></div>
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+
