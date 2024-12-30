@@ -2,7 +2,8 @@
   <style>
     @keyframes typing {
       0% { width: 0; }
-      100% { width: 250px; }
+      50% { width: 100%; }
+      100% { width: 0; }
     }
     .text {
       font-family: 'Courier New', monospace;
@@ -10,7 +11,6 @@
       white-space: nowrap;
       overflow: hidden;
       border-right: 2px solid black;
-      animation: typing 2s steps(25) infinite;
     }
     .hidden {
       visibility: hidden;
@@ -20,44 +20,78 @@
       stroke: #000;
       stroke-width: 2;
     }
-  </style>
 
-  <!-- Text containers -->
-  <text x="20" y="40" class="text" id="python">print("ByeCoder")</text>
-  <text x="20" y="80" class="text hidden" id="lua">print("ByeCoder")</text>
-  <text x="20" y="120" class="text hidden" id="php">echo "ByeCoder";</text>
-  <text x="20" y="160" class="text hidden" id="bash">echo "ByeCoder"</text>
-
-  <!-- Animation logic -->
-  <script>
-    let pythonText = document.getElementById('python');
-    let luaText = document.getElementById('lua');
-    let phpText = document.getElementById('php');
-    let bashText = document.getElementById('bash');
-
-    function animateText() {
-      setTimeout(() => {
-        pythonText.classList.add('hidden');
-        luaText.classList.remove('hidden');
-      }, 2500);
-
-      setTimeout(() => {
-        luaText.classList.add('hidden');
-        phpText.classList.remove('hidden');
-      }, 5000);
-
-      setTimeout(() => {
-        phpText.classList.add('hidden');
-        bashText.classList.remove('hidden');
-      }, 7500);
-
-      setTimeout(() => {
-        bashText.classList.add('hidden');
-        pythonText.classList.remove('hidden');
-      }, 10000);
+    /* Animation for hiding and showing texts */
+    @keyframes textReveal {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
     }
 
-    animateText();
-    setInterval(animateText, 15000); // Loop the animation
+    .reveal {
+      animation: textReveal 5s forwards;
+    }
+  </style>
+
+  <!-- Text containers for the code examples -->
+  <text x="20" y="40" class="text" id="python"># Python Code</text>
+  <text x="20" y="80" class="text hidden" id="python_code">print("ByeCoder")</text>}
+  
+  <text x="20" y="120" class="text hidden" id="lua"># Lua Code</text>
+  <text x="20" y="160" class="text hidden" id="lua_code">print("ByeCoder")</text>
+
+  <text x="20" y="200" class="text hidden" id="php"># PHP Code</text>
+  <text x="20" y="240" class="text hidden" id="php_code">echo "ByeCoder";</text>
+
+  <text x="20" y="280" class="text hidden" id="bash"># Bash Code</text>
+  <text x="20" y="320" class="text hidden" id="bash_code">echo "ByeCoder"</text>
+
+  <!-- Animation logic with CSS for the text -->
+  <script>
+    // Function to handle the animation sequence
+    let pythonText = document.getElementById('python');
+    let pythonCode = document.getElementById('python_code');
+    let luaText = document.getElementById('lua');
+    let luaCode = document.getElementById('lua_code');
+    let phpText = document.getElementById('php');
+    let phpCode = document.getElementById('php_code');
+    let bashText = document.getElementById('bash');
+    let bashCode = document.getElementById('bash_code');
+
+    // Function to animate each language one by one
+    function animateCode() {
+      setTimeout(() => {
+        pythonText.classList.add('hidden');
+        pythonCode.classList.add('reveal');
+      }, 1000);
+
+      setTimeout(() => {
+        pythonCode.classList.remove('reveal');
+        luaText.classList.remove('hidden');
+        luaCode.classList.add('reveal');
+      }, 6000); // After 5 seconds
+
+      setTimeout(() => {
+        luaCode.classList.remove('reveal');
+        phpText.classList.remove('hidden');
+        phpCode.classList.add('reveal');
+      }, 11000); // After 10 seconds
+
+      setTimeout(() => {
+        phpCode.classList.remove('reveal');
+        bashText.classList.remove('hidden');
+        bashCode.classList.add('reveal');
+      }, 16000); // After 15 seconds
+
+      setTimeout(() => {
+        bashCode.classList.remove('reveal');
+        pythonText.classList.remove('hidden');
+        pythonCode.classList.add('reveal');
+      }, 21000); // After 20 seconds
+    }
+
+    // Start the animation and loop it
+    animateCode();
+    setInterval(animateCode, 25000); // Loop the sequence
   </script>
 </svg>
