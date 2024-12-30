@@ -1,8 +1,8 @@
+<p align="center">
 ![WhoIam](https://img.shields.io/badge/Who_I_am:_A_full_stack_developer-FF7F00?style=for-the-badge&logo=brain&logoColor=white)
 <br>
 ![MyName](https://img.shields.io/badge/My_Name:_Pouya_Poorrahman-4CAF50?style=for-the-badge&logo=brain&logoColor=white)
 
-<img src=https://raw.githubusercontent.com/ByeCoder/ReadMe/refs/heads/main/ByeCoder.webp></img>
 <img src=https://raw.githubusercontent.com/ByeCoder/ReadMe/refs/heads/main/ByeCoder2.webp></img>
 
 
@@ -20,3 +20,6 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)
 
+<img src=https://raw.githubusercontent.com/ByeCoder/ReadMe/refs/heads/main/ByeCoder.webp></img>
+
+</p>
